@@ -1,0 +1,740 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="deno music"/>
+    <title>OU STORE</title>
+    <link rel="shortcut icon" href="img/phone.png"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" 
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script  src="js/script.js"></script>
+    <style>
+        div.header_now {
+            text-align:center;
+            background-color: rgb(255, 255, 255) !important;
+            margin:0 auto;
+	        overflow:auto;
+	        padding-left:20px;
+        }
+
+        div.header > p {
+            margin:10px 0px 10px 0px ;
+            font-family:"Comic Sans MS", cursive;
+            font-size:20px;
+            font-weight:600;
+        }
+
+        div.header > h2 {
+            margin:0px 0px 50px 0px ;
+            font-family:"Comic Sans MS", cursive;
+            font-size:15px;
+        }
+
+        div.body_now ul li > button > a {
+            color:#FFF;
+        }
+        div.body_now  a {
+            text-decoration:none;
+            color:blue;
+        }
+        div.body_now {
+            text-align:center;
+        }
+        div.body_now form > ul {
+            list-style-type:none;
+        }
+        div.body_now form ul li > button {
+            width:220px;
+            height:35px;
+            background-color:#4267B2;
+            border:1px solid #333;
+            border-radius:5px;
+        }
+        div.body_now form ul li > button#btLogin{
+            margin:30px 0px 30px 0;
+            background-color:#333;
+        }
+        div.body_now form ul li > button#btLogin > a {
+            font-family:"Comic Sans MS", cursive;
+            font-weight:500;
+            font-size:18px;
+        }
+        div.body_now form ul > hr {
+            margin-top:30px;
+            width:60%;
+            text-align:center;
+        }
+        
+        form ul li:nth-child(4) > button{
+            border-bottom-color:red !important;
+        }
+        form ul li > input {
+            color:#333;
+            font-family:"Comic Sans MS", cursive;
+            width:530px;
+            height:35px;
+            border-radius:5px;
+            border:1px solid #333;
+            margin-top:30px;
+        }
+        .body-first_now {
+            background-color: rgb(255, 255, 255) !important;
+        }
+
+    </style>
+</head>
+
+<body >
+    <!-------------------------------HTML-NAV-MENU----------------------------------------------->                
+    <nav class="menu">
+        <ul>
+            <li>
+                <a class="itemmenu" href="#">HOME</a>
+            </li>
+            <li class="submenu">
+                <a class="itemmenu" href="#">ĐIỆN THOẠI</a>
+                <!--<span class="itemmenu">ĐIỆN THOẠI</span>-->
+                <ul class="subcontent">
+                    <li>
+                        <a href="#">
+                            <img src="img/icon/apple.png"/>
+                            <p>Apple</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icon/samsung.jpg"/>
+                            <p>Samsung</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icon/vsmart.png"/>
+                            <p>Vsmart</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icon/oppo.png"/>
+                            <p>Oppo</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icon/lg.png"/>
+                            <p>LG</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icon/add.png"/>
+                            <p>Xem thêm</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="submenu">
+                <a class="itemmenu" href="#">TABLET</a>
+                <!--<span class="itemmenu">TABLET</span>-->
+                <ul class="subcontent">
+                    <li>
+                        <a href="#">
+                            <img src="img/header.png"/>
+                            <p>Tablet Mới</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/header.png"/>
+                            <p>Tablet Cũ</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="submenu">
+                <a class="itemmenu" href="#">LAPTOP</a>
+                <ul class="subcontent">
+                    <li>
+                        <a href="#">
+                            <img src="img/header.png"/>
+                            <p>Laptop Mới</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/header.png"/>
+                            <p>Laptop Cũ</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="submenu">
+                <a class="itemmenu" href="#">PHỤ KIỆN</a>
+                <ul class="subcontent">
+                    <li>
+                        <a href="#">
+                            <img src="img/header.png"/>
+                            <p>QQ Mới</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/header.png"/>
+                            <p>QQ Cũ</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="submenu">
+                <a class="itemmenu" href="#">ĐỒNG HỒ</a>
+                <ul class="subcontent">
+                    <li>
+                        <a href="#">
+                            <img src="img/header.png"/>
+                            <p>Đồng Hồ Mới</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/header.png"/>
+                            <p>Đồng Hồ Cũ</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="submenu">
+                <a class="itemmenu" href="#">HỎI ĐÁP</a>
+                <ul class="subcontent">
+                    <li>
+                        <a href="#">
+                            <img src="img/header.png"/>
+                            <p>Mới</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/header.png"/>
+                            <p>Cũ</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+
+
+    <!-------------------------------HTML-HEADER----------------------------------------------->
+    <header class="container">
+        <div class="position">
+            <div class="header">
+                <img src="img/iPhone.png"/>
+                    <div class="text">
+                            <p class="topText">OU STORE</p>
+                            <p class="bottomText">Every product is an experience</p>
+                    </div>
+                    <form>
+                        <div>
+                        <input type="text" placeholder="&nbsp;&nbsp;Tìm kiếm sản phẩm...">
+                        <i class="fas fa-search-dollar" aria-hidden="true"></i>	                    <!---??--->
+                        </div>
+                        <button id="btRegister"><a href="#" target="_blank">Đăng ký</a></button>
+                    </form>
+            </div>
+        </div>
+    </header>
+
+    
+
+    <div class="body">
+        <!-------------------------------------------------BODY FIRT----------------------------->    
+
+        <div class="body-first_now">
+            <div class="container">
+                <div class="header_now">
+                <p>LOGIN</p>
+                <h2 class="textp">Welcome to OU Store.</h2>
+                </div>
+                <div class="body_now">
+                    <form>
+                    <ul>
+                        <li>UserName :&nbsp;<input type="text"/></li>
+                        <li>PassWord :&nbsp;<input type="text"/></li>
+                        <li><button id="btLogin"><a href="#">Login</a></button></li>
+                        <li><button><a href="https://www.facebook.com/">Login with Facebook</a></button></li>
+                    </ul>
+                    </form>
+                </div>
+                <div class="footer">
+                </div>
+            </div>
+        
+        </div>
+
+    <!----------------------------------------BODY PRODUCT-------------------------------->
+    <section class="body-newproduct">
+        <h2 class="mn-title h2_cen"><span class="span_cen">Sản phẩm xem gần đây</span></h2>
+        <div class="lst-prod-new list-prod">
+            <div class="item_prod">
+                <div class="prod_item prod_wrap">
+                    <a href="/samsung-galaxy-z-flip.html" tabindex="0">
+                        <span class="prod_item_img">
+                            <img src="img/product/tai-nghe-true-wireless-sony-extra-bass-wf-xb700-13.jpg" 
+                            alt="Tai nghe True Wireless Sony Extra Bass WF-XB700" class="ld-late" style="opacity: 1;">
+                        </span>
+                        <h4 class="prod_item_name">Tai nghe True Wireless Sony Extra Bass WF-XB700</h4>
+                        <div class="pr_price">
+                            <span class="prod_item_price">2.990.000đ</span>    
+                            <span class="prod_item_price_old"></span>   
+                        </div>
+                        
+                        <span class="promo-item new-promo-item">MUA SỚM, QUẢ ĐỈNH</span>
+                        <!---
+                        <span class="gift-promo-item" data-target="#pro-gift-12284">
+                            <i class="fa fa-gift"></i>QUÀ TẶNG
+                        </span>  -->                                      
+                        <div class="overlay-info">
+                            <span class="button-1">Mua Ngay</span>
+                        </div>
+                    </a>                                
+                </div>
+
+                
+            </div>
+
+            <div class="item_prod">
+                <div class="prod_item prod_wrap">
+                    <a href="/samsung-galaxy-z-flip.html" tabindex="0">
+                        <span class="prod_item_img">
+                            <img src="img/product/loa-bowers-wilkins-formation-duo-8.jpg" 
+                            alt="Loa Bowers & Wilkins Formation Duo" class="ld-late" style="opacity: 1;">
+                        </span>
+                        <h4 class="prod_item_name">Loa Bowers & Wilkins Formation Duo</h4>
+                        <div class="pr_price">
+                            <span class="prod_item_price">105.890.000đ</span>
+                            <span class="prod_item_price_old"></span>        
+                        </div>
+                        
+                        <span class="promo-item new-promo-item">NEW</span>
+                        <!--
+                        <span class="gift-promo-item" data-target="#pro-gift-12284">
+                            <i class="fa fa-gift"></i>QUÀ TẶNG
+                        </span>    -->                                        
+                        <div class="overlay-info">
+                            <span class="button-1">Mua Ngay</span>
+                        </div>
+                    </a>                                
+                </div>
+
+                
+            </div>
+
+            <div class="item_prod">
+                <div class="prod_item prod_wrap">
+                    <a href="/samsung-galaxy-z-flip.html" tabindex="0">
+                        <span class="prod_item_img">
+                            <img src="img/product/bowers-wilkins-PX5-4.jpg" 
+                            alt="Tai nghe không dây chống ồn Bowers & Wilkins PX5" class="ld-late" style="opacity: 1;">
+                        </span>
+                        <h4 class="prod_item_name">Tai nghe không dây chống ồn Bowers & Wilkins PX5</h4>
+                        <div class="pr_price">
+                            <span class="prod_item_price">8.490.000đ</span>
+                            <span class="prod_item_price_old"></span>       
+                        </div>
+                        
+                        <span class="promo-item new-promo-item">NEW</span>
+                        <!--
+                        <span class="gift-promo-item" data-target="#pro-gift-12284">
+                            <i class="fa fa-gift"></i>QUÀ TẶNG
+                        </span>    -->                                        
+                        <div class="overlay-info">
+                            <span class="button-1">Mua Ngay</span>
+                        </div>
+                    </a>                                
+                </div>
+
+                
+            </div>
+
+            <div class="item_prod">
+                <div class="prod_item prod_wrap">
+                    <a href="/samsung-galaxy-z-flip.html" tabindex="0">
+                        <span class="prod_item_img">
+                            <img src="img/product/dan-am-thanh-di-dong-acnos-ksnet550-1.jpg" 
+                            alt="Dàn âm thanh di động ACNOS KSNET550" class="ld-late" style="opacity: 1;">
+                        </span>
+                        <h4 class="prod_item_name">Dàn âm thanh di động ACNOS KSNET550</h4>
+                        <div class="pr_price">
+                            <span class="prod_item_price">14.490.000đ</span>
+                            <span class="prod_item_price_old"></span>       
+                        </div>
+                        
+                        <span class="promo-item new-promo-item">NEW</span>
+                        <!--
+                        <span class="gift-promo-item" data-target="#pro-gift-12284">
+                            <i class="fa fa-gift"></i>QUÀ TẶNG
+                        </span>    -->                                        
+                        <div class="overlay-info">
+                            <span class="button-1">Mua Ngay</span>
+                        </div>
+                    </a>                                
+                </div>
+
+                
+            </div>
+
+            <div class="item_prod">
+                <div class="prod_item prod_wrap">
+                    <a href="/samsung-galaxy-z-flip.html" tabindex="0">
+                        <span class="prod_item_img">
+                            <img src="img/product/mobiado-forma-steel-white-2.jpg" 
+                            alt="Mobiado Forma Steel - White" class="ld-late" style="opacity: 1;">
+                        </span>
+                        <h4 class="prod_item_name">Mobiado Forma Steel - White</h4>
+                        <div class="pr_price">
+                            <span class="prod_item_price">65.690.000đ</span>       
+                        </div>
+                        
+                        <span class="promo-item new-promo-item">NEW</span>
+                        <!---
+                        <span class="gift-promo-item" data-target="#pro-gift-12284">
+                            <i class="fa fa-gift"></i>QUÀ TẶNG
+                        </span> -->                                       
+                        <div class="overlay-info">
+                            <span class="button-1">Mua Ngay</span>
+                        </div>
+                    </a>                                
+                </div>
+
+                
+            </div>
+
+            <div class="item_prod">
+                <div class="prod_item prod_wrap">
+                    <a href="/samsung-galaxy-z-flip.html" tabindex="0">
+                        <span class="prod_item_img">
+                            <img src="img/product/tai-nghe-true-wireless-harman-kardon-fly-tws-3.jpg" 
+                            alt="Tai nghe True Wireless Harman Kardon FLY TWS" class="ld-late" style="opacity: 1;">
+                        </span>
+                        <h4 class="prod_item_name">Tai nghe True Wireless Harman Kardon FLY TWS</h4>
+                        <div class="pr_price">
+                            <span class="prod_item_price">5.000.000đ</span>       
+                        </div>
+                        
+                        <span class="promo-item new-promo-item">NEW</span>
+                        <!--
+                        <span class="gift-promo-item" data-target="#pro-gift-12284">
+                            <i class="fa fa-gift"></i>QUÀ TẶNG
+                        </span>    -->                                        
+                        <div class="overlay-info">
+                            <span class="button-1">Mua Ngay</span>
+                        </div>
+                    </a>                                
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!------------------------------------------BODY TAG------------------------------------>
+    <section class="tag bod">
+        <div class="tag_left">
+            <i class="fa fa-tags"></i><span>Tìm nhanh</span>
+        </div>
+        <div class="tag_right">
+                            <a href="#">Loa di động (167)</a>
+                            <a href="#">Tai nghe (264)</a>
+                            <a href="#">Dàn Hi-Fi mini &amp; Soundbars (60)</a>
+                            <a href="#">Rạp hát gia đình (146)</a>
+                            <a href="#">Máy nghe nhạc, ghi âm (16)</a>
+                            <a href="#">HeadAmp &amp; DAC (8)</a>
+                            <a href="#">Sản phẩm nghe nhìn khác (100)</a>
+                            <a href="#">CD / Đĩa than ca nhạc (10)</a>
+                            <a href="#">Bao da / Ốp lưng (421)</a>
+                            <a href="#">Pin / Pin dự phòng (152)</a>
+                            <a href="#">Cable, Adapter, đầu đọc thẻ (185)</a>
+                            <a href="#">Phụ kiện máy tính, MacBook (47)</a>
+                            <a href="#">Sạc, đế sạc, ổ cắm điện (109)</a>
+                            <a href="#">Miếng dán màn hình (78)</a>
+                            <a href="#">Chuột - Mouse (30)</a>
+                            <a href="#">Bàn phím, lót bàn phím (25)</a>
+                            <a href="#">Bút cảm ứng (10)</a>
+                            <a href="#">Phụ kiện xe hơi (30)</a>
+                            <a href="#">Giá đỡ điện thoại PopSockets (104)</a>
+                            <a href="#">Các loại phụ kiện khác  (34)</a>
+                            <a href="#">Đồ dã ngoại / Outdoor (112)</a>
+                            <a href="#">Smarthome - Nhà thông minh (55)</a>
+                            <a href="#">PS4 / Game PS4 / Phụ kiện PS4 (38)</a>
+                            <a href="#">Đồng hồ thông minh (138)</a>
+                            <a href="#">Máy ảnh / Action Cam / Gimbal (35)</a>
+                            <a href="#">Thiết bị lưu trữ (73)</a>
+                            <a href="#">Wireless Router (42)</a>
+                            <a href="#">Ba lô / Túi xách công nghệ (122)</a>
+                            <a href="#">Thiết bị khác / Hàng độc (39)</a>
+        </div>
+    </section>
+</div>
+
+
+    <!------------------------------------------FOOTER------------------------------------>
+    <footer class="footer">
+        <div class="ft_con">
+            <!-- START MENU LUXURY MOBILE-->
+            <section class="ft_col row">
+
+                <!-- START MENU LUXURY MOBILE-->
+                <div class="col-1">
+                    <h3 class="title_text">ÂM THANH DANH TIẾNG</h3>
+                    <div class="content">
+                        <ul class="list-bullet list-bullet-style">
+                            <li>
+                                <a href="#">Bose - Mỹ</a>
+                            </li>
+                            <li>
+                                <a href="#">Bang & Olufsen - Đan Mạch</a>
+                            </li>
+                            <li>
+                                <a href="#">Dynaudio - Đan Mạch</a>
+                            </li>
+                            <li>
+                                <a href="#">JBL - Mỹ</a>
+                            </li>
+                            <li>
+                                <a href="#">Harman/Kardon - Mỹ</a>
+                            </li>
+                            <li>
+                                <a href="#">Sony - Nhật Bản</a>
+                            </li>
+                            <li>
+                                <a href="#">Denon - Nhật Bản</a>
+                            </li>
+                            <li>
+                                <a href="#">Marshall - Anh Quốc</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--END-->
+
+                <!-- START MENU Accessories-->  
+                <div class="col-2">
+                    <h3 class="title_text">Gadget - Đồ chơi công nghệ</h3>
+                    <div class="content">
+                        <ul class="list-bullet list-bullet-style">
+                            <li>
+                                <a href="#">GoPro chính hãng</a>
+                            </li>
+                            <li>
+                                <a href="#">Garmin - Đồng hồ thể thao</a>
+                            </li>
+                            <li>
+                                <a href="#">Fitbit - Vòng đeo thể thao</a>
+                            </li>
+                            <li>
+                                <a href="#">Misfit - Vòng đeo thể thao</a>
+                            </li>
+                            <li>
+                                <a href="#">Led Lenser - Đèn pin cao cấp</a>
+                            </li>
+                            <li>
+                                <a href="#">Leatherman - Dụng cụ đa năng</a>
+                            </li>
+                            <li>
+                                <a href="#">Chuyên trang tai nghe Jabra</a>
+                            </li>
+                            <li>
+                                <a href="#">Chuyên trang tai nghe Audio Technica</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <!--END-->
+
+                <!-- START  Hệ thống cửa hàng-->   
+                <div class="col-3">
+                    <!-- START  Social Network-->
+                    <div class="col-31 row">
+                        <h3 class="title_text">SOCIAL NETWORK</h3>
+                        <div class="content">
+                            <ul class="list-bullet ico">
+                                <li>
+                                    <a href="https://www.facebook.com" title="Facebook" class="facebook">
+                                        <img src="img/ico/facebook.png" title="Facebook" /></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.twitter.com" title="Twitter" class="twitter">
+                                        <img src="img/ico/twitter.png" title="Twitter" /></a>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com" title="Youtube" class="youtube">
+                                        <img src="img/ico/googleplus.png" title="Youtube" /></a>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!--END-->
+
+                    <!-- START  Hệ thống cửa hàng-->
+                    <div class="col-31">
+                        <h3 class="title_text">HỆ THỐNG CỬA HÀNG CÔNG NGHỆ THUỘC OU SMART STORE</h3>
+                        <div class="content">
+                            <ul class="list-bullet">
+                                <li>
+                                    <a href="#" title="address" class="#">
+                                        OU STORE - 97 Võ Văn Tần, Q.3, TP.HCM - ĐT: (028) 38.936.9X5 - 38.936.9X5
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="address" class="#">
+                                        OU STORE - 97 Võ Văn Tần, Q.3, TP.HCM - ĐT: (028) 38.936.9X5 - 38.936.9X5
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="address" class="#">
+                                        OU STORE - 97 Võ Văn Tần, Q.3, TP.HCM - ĐT: (028) 38.936.9X5 - 38.936.9X5
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="address" class="#">
+                                        OU STORE - 97 Võ Văn Tần, Q.3, TP.HCM - ĐT: (028) 38.936.9X5 - 38.936.9X5
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="address" class="#">
+                                        OU STORE - 97 Võ Văn Tần, Q.3, TP.HCM - ĐT: (028) 38.936.9X5 - 38.936.9X5
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="address" class="#">
+                                        OU STORE - 97 Võ Văn Tần, Q.3, TP.HCM - ĐT: (028) 38.936.9X5 - 38.936.9X5
+                                    </a>
+                                </li><li>
+                                    <a href="#" title="address" class="#">
+                                        OU STORE - 97 Võ Văn Tần, Q.3, TP.HCM - ĐT: (028) 38.936.9X5 - 38.936.9X5
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="address" class="#">
+                                        OU STORE - 97 Võ Văn Tần, Q.3, TP.HCM - ĐT: (028) 38.936.9X5 - 38.936.9X5
+                                    </a>
+                                </li>
+                              
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!--END-->
+                </div>
+                <!--END-->  
+
+                <!-- START  Đặt hàng online-->
+                <div class="col-4">
+                    <h3 class="title_text">
+                        <span>ĐẶT HÀNG ONLINE </span>
+                        <p> GIAO TẬN NƠI</p>
+                    </h3>
+                    <div class="content col">
+                        <ul>
+                            <li><span>1</span>Đổi mới trong vòng 15 ngày nếu sản phẩm bị lỗi do nhà sản xuất</li>
+                            <li><span>2</span>Thanh toán trực tiếp hoặc ATM, VISA, MASTER CARD</li>
+                            <li><span>3</span>Gọi ngay Phòng kinh doanh Online - ĐT: (028) 38.936.9X5 - 0946.936.9X5 (Viber, Zalo, WhatsApp, iMessage) để được tư vấn và giao hàng tận nơi trên toàn quốc.</li>
+                        </ul>
+                        <div class="hotline">
+                            <div class="hotline-inner"><span class="i-hot"><i class="fa fa-phone"></i></span>
+                                <h4 class="textp"><span>hotline</span><a href="tel:+84946.936.9X5" class="textp">0946.936.9X5</a></h4>
+                            </div>
+                        </div>
+                        <div class="f-app">
+                            <a href="https://itunes.apple.com/us/" rel="nofollow"><img src="img/ico/Appstore@2x.png" alt=""></a>
+                            <a href="https://play.google.com/store/apps" rel="nofollow"><img src="img/ico/playstore@2x.png" alt=""></a>
+                        </div>
+                        <div class="h-face">
+                            <div class="h-face-inner">
+                                <div class="fb-page fb_iframe_widget" 
+                                    data-href="https://www.facebook.com/hien.alexander133" 
+                                    data-tabs="" data-width="233" data-height="72" data-small-header="true" 
+                                    data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false" 
+                                    fb-xfbml-state="rendered" 
+                                    fb-iframe-plugin-query="adapt_container_width=false&amp;app_id=&amp;container_width=187&amp;height=72&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fmainguyenluxurymobile%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;width=233">
+                                    <span style="vertical-align: bottom; width: 233px; height: 70px;">
+                                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhien133%2F&tabs=timeline&width=233&height=72&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                                        width="233" height="72" style="border:none;overflow:hidden" scrolling="no" 
+                                        frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--END-->
+            </section>
+
+            <!-- START MENU BOTTOM-->
+            <nav class="row bottom-menu">
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Quy định sử dụng</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Hướng dẫn đặt hàng</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                </ul>
+            </nav>
+            <!-- END -->
+
+        </div>
+    </footer>
+    <!-------------------------------------FOOTER BOTTOM---------------------------------->
+    <section class="footer-bottom">
+        <div class="container">
+            <div class="ft_bt_con row">
+
+                <div class="left_footer">
+                    <a href="#" class="logo center">
+                        <img src="img/ico/ou2.png" alt="điện thoại cao cấp OU STORE" class="oustore"/>
+                    </a>
+                    <div class="copyright mgin">
+                        <p>Công ty TNHH OU STORE - 97 Võ Văn Tần, Q.3, TP.HCM</p>
+                        <p>Email: contact@oustore.vn</p>
+                        <p>Chịu trách nhiệm quản lý nội dung: Huỳnh Xuân Hiển</p>
+                        <p>Giấy phép số 7X/GP-ICP-STTTT cấp ngày 31.02.2020 do Sở Thông tin và Truyền thông cấp</p>
+                        <p>Copyrights © 2020 OUStore.vn. All Rights Reserved</p>
+                    </div>
+                </div>
+ 
+                <div class="center_footer">
+                    <div class="payment-block">
+                        <p>CHẤP NHẬN THANH TOÁN</p>
+                        <img src="img/ico/visa.png" alt="Visa" class="visa ico"/>
+                        <img src="img/ico/mastercard.png" alt="MasterCard" class="mastercard ico"/>
+                    </div>
+                </div>
+                <div class="right_footer">
+                    <a href="http://online.gov.vn" target="_blank" class="blk-congthuong">
+                    <img src="img/ico/logo-bocongthuong.png" alt="TMĐT"/>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
